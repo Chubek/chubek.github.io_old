@@ -4,20 +4,23 @@ title:  "Videogames: A Data Study"
 date:   2020-11-15 00:12:17 +0330
 categories: video games
 ---
+
+**NOTE**: This post contains large images that are readable upon zoom. Use Ctrl+Plus to zoom. After you're done reading, press Ctrl+0.
+
 The videogame bubble in North America has burst twice. Once in 1977, only three years after Pong started the trend (Magnavox Oddessy is not at all what I consider a gaming console) and once in 1983. This data ignores all the second generation consoles except Atari 2600, and it ignores the premiere years of this console and begins at 1980. It's worth noting that this dataset ends at 2016. It can be found [here](https://www.kaggle.com/sidtwr/videogames-sales-dataset).
 
 # One: Data Analysis
 
 Let's start gumshoing in this dataset by comparing count of game sales based on genre across years.
 
-![Genre by Year](/assets/img/vidya_assets/top_genre_year.png)
+![Genre by Year](/assets/img/top_genre_year.png)
 
 There's nothing worth noting in this graph that we didn't already know. Action games have indeed taken over the majority of videogames. Europe and North American tastes are almost indentical. However, the Japanese seem to take extra joy in the role-playing genre. Another genre which Japan takes a slight lead in is the puzzle genre. The Japanese don't enjoy shooters at all. Having seen the trends in Japanese speedrunner community, it could be factual.
 
 
 The next chart we're going to analyze is all about global sales and publishers. Guess who comes on top?
 
-![Global Sales by Publisher](/assets/img/img/vidya_assets/top10-publisher-globalsales.png)
+![Global Sales by Publisher](/assets/img/top10-publisher-globalsales.png)
 
 One of these 10 is not like the other, and that's THQ. A publisher that's a former shadow of itself. This just goes to show how enormous THQ was at once.
 
@@ -30,7 +33,7 @@ This chart just confirms many people's beliefs that PS2, X360 and PS3 turned a c
 
 Now let's see which platforms have the lowest sales.
 
-![Lowest Sales in Platforms](/assets/img/vidya_assets/b10_plat_gsales.png)
+![Lowest Sales in Platforms](/assets/img/b10_plat_gsales.png)
 
 This chart shows that the lowest-selling "mainstream" consoles sold loads more than the "niche" consoles. I bet some of you are killing yourself for not knowing what these "niche" console name abbrevations satand for. So let me put your mind at east:
 
@@ -42,7 +45,7 @@ The rest are obvious.
 
 Another graph I've made shows the top publisher sales according to region:
 
-![Regions Sold](/assets/img/vidya_assets/regions_sold.png)
+![Regions Sold](/assets/img/regions_sold.png)
 
 This just goes to show that Japan HATES Western publishers.
 
@@ -50,7 +53,7 @@ This just goes to show that Japan HATES Western publishers.
 
 Now what I wanna do is to analyze the critic scores, bottom 10 critic scores, based on publisher. Why am I not examining top critic scores? Because there's little variety in top scores, and we all know which publishers have the highest-rated games. So let's let's see which publishers have the lowest *mean* critic score?
 
-![Bottom Mean Critic Score based on Publisher](/assets/img/vidya_assets/meancriticscore_bot10.png)
+![Bottom Mean Critic Score based on Publisher](/assets/img/meancriticscore_bot10.png)
 
 But who is "Popcorn Arcade", which is appearantly the worst publisher ever, based on hard data?
 
@@ -78,13 +81,13 @@ People into videogames will definitely recognize Anubis II. This game was a resk
 
 But which genre has the highest mean critic score? 
 
-![Mean Critic Score based on Genre](/assets/img/vidya_assets/mean_score_genre.png)
+![Mean Critic Score based on Genre](/assets/img/mean_score_genre.png)
 
 it's a close call, but it seems like role-playing games are the highest rated. Rest of the tiers are extremely close to call.
 
 Let's analyze age ratings, specificly ESRB ratings, through 2000s and 2010s.
 
-![Ratings based on Year](/assets/img/vidya_assets/rating_year.png)
+![Ratings based on Year](/assets/img/rating_year.png)
 
 The dominant rating seems to be E, however, there seems to be a drop in games rated for Everyone in the 2010-2015 epoch. Also there seems to be a lot more M rated games in 2005-2010.
 
@@ -92,23 +95,23 @@ Graphs from now on are going to be stacked, and extremely multivariate. So prepa
 
 First one I'm going to show you is the Top 10 Publisher-Developer-Global Sales-Genre chart. You may hate stacked charts but you can deny that they indicate more info than their baggage of reding.
 
-![Top 10 Publisher - Genre - Global Sales - Developer](/assets/img/vidya_assets/top10_pub_dev_gs_gen.png)
+![Top 10 Publisher - Genre - Global Sales - Developer](/assets/img/t10_pub_dev_gs_gen.png)
 
-First off, this chart shows that most publishers hire developers to do sports games. It also affirms that EA Sports is the biggest sports publisher, with Visual Concepts being the smallest. Visual Concepts is now operating under Take-Two Interactive, as it is evident in the graph, and they make franchises such as WWE and NBA. The rest of the sports developers are variosu EA Studioes.
+First off, this chart shows that most publishers hire developers to do sports games. It also affirms that EA Sports is the biggest sports publisher, with Visual Concepts being the smallest. Visual Concepts is now operating under Take-Two Interactive, as it is evident in the graph, and they make franchises such as WWE and NBA. The rest of the sports developers are various EA Studioes.
 
 I'll let you analyze the rest, but note at how Rockstart North is the biggest Action game developer in terms of global sales. I'm not sure if you've heard of them but they once made a game called Body Harvest.
 
 Now another stacked chart. Genre vs Year. Years are grouped in terms of five-year periods, with each single year being colored.
 
-![Year Genre](/assets/img/vidya_assets/genre_year.png)
+![Year Genre](/assets/img/genre_year.png)
 
 What this graph shows is a spike on the covariance of number of games in 2010-2015 epoch. Plus, some it really shows that a lot of genres took their root in 1990-95 epoch, with them not appearing in previous periods. Again, it shows that sports and action games have always been popular.
 
 Now another graph, genre vs platform grouped by generation:
 
-![Genre Platform in each Generation](/assets/img/vidya_assets/genres_plat.png)
+![Genre Platform in each Generation](/assets/img/genres_plat.png)
 
-First off, notice that one of the genres is "nan". NaN means "Not a Number" but in this case, fringe, non-categorical genres are labeled nan. I would have really appreciated a more descriptive title, but the Kaggle dataset had it, and in some generation, non-categorical genre is too high to ignore.
+I admit, when I made this chart, I forgot to remove the label reserved for unknown publishers which the person who scraped the data put in not to break his loops. I apologize.
 
 In early games, early being Atari 2600 and some NES, shooter and sports games took the helm. There was no sumulation, strategy or role-playing games back then.
 Most games in the 8-bit era are NES and WonderSwan. We see a surge of RPGs here. There's just too many RGPs in 16-bit era. I've also made 2000s handheld and PC games a separate category.
@@ -117,13 +120,13 @@ We've had enough bar charts. Let's take a look at a few scatterplots. These are 
 
 The first one I wanna show is Global Sales vs. Critic Score:
 
-![Global Salse Critic Score](/assets/img/vidya_assets/gsales_cs.png)
+![Global Salse Critic Score](/assets/img/gsaels_cs.png)
 
 I'm honestly not surprised by this chart. One WOULD expect the distribution to be normal (as in, increase-increase or decrease-decrease) but this is just... cathardic. It shows that people don't even care about what criticism is pointed at a game. It's a hectic chart that shows little to no correlation.
 
 Same with Japan Sales vs. Critic Score:
 
-![Japan Sale vs. Critic Score](/assets/img/vidya_assets/jpsales_cs.png)
+![Japan Sale vs. Critic Score](/assets/img/jpsales_cs.png)
 
 Well, there are more outliers in this graph, but the distribution remains the same.
 
@@ -150,28 +153,28 @@ Generating a chart for all the publishers at the same time would be awesome, but
 
 Let's look at Nintendo's:
 
-![Nintendo Prediction](/assets/img/vidya_assets/nintendo_cscore_pred.png)
+![Nintendo Prediction](/assets/img/nintendo_cscore_pred.png)
 
-What we see here is that Nintendo probably won't preform well in most genres.
+What we see here is that Nintendo probably won't preform well in most genres. Just joking, if Nintendo is not performing well, it means there wasn't enough data for that certain genre. Same with most of these charts. I just got the predictions for all the genres to be safe. It's obvious that some publishers perform better in their own specialty.
 
 Let's Ubi's:
 
-![Ubisoft Prediction](/assets/img/vidya_assets/ubisoft_pred.png)
+![Ubisoft Prediction](/assets/img/ubisoft_pred.png)
 
 Uh. Ubi is known for making garbage, and the fact that their shooters seem to be so high-scored makes me realize this model needs much more work (I don't deny that this model is the lowest common denominator of models).
 
 Valve's outlook isn't changing, considering that they don't even make games in the genres where the outcome is low:
 
-![Valve Prediction](/assets/img/vidya_assets/valve_pred.png)
+![Valve Prediction](/assets/img/valve_pred.png)
 
 Same for Activision:
 
-![Activision Prediction](/assets/img/vidya_assets/acti_pred.png)
+![Activision Prediction](/assets/img/acti_pred.png)
 
 
 And EA will do well in sports, as it always does:
 
-![EA Prediction](/assets/img/vidya_assets/ea_predict.png)
+![EA Prediction](/assets/img/ea_predict.png)
 
 One thing, the last genre is "nan" or the garbage category so don't mind it not being labeled.
 
@@ -180,7 +183,7 @@ If I wish to make better predictions in the near future, I'll need to do much, m
 
 Another thing I did was running a Bayesian GLM (Generalzied Linear Model) on the Critic Score and Global Sales metric. Bayesian GLMs are like Linear Regression, but they run on Bayesian Probablities, and not Frequentist Probabilites.
 
-![Critic Score GLM](/assets/img/vidya_assets/global_sales-cscore_posterior.png)
+![Critic Score GLM](/assets/img/global_sales-cscore_posterior.png)
 
 Looking at the scatterplot of Global Sales vs. Critic Score, this graph is wishful thinking.
 
