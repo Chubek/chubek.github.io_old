@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Retro Programming is Fun!"
-date:   2020-12-16 09:12:17 +0330
-categories: Retro computing
+date:   2020-12-10 09:12:17 +0330
+categories: retro
 ---
 As few months ago I decided that I wanna learn 6502 Assembly. Prior to that, I had only studied some non-standard version of Assembly on a virtual assembler, which our teacher told us is close to old ARM assembly, and even then, I hadn't learned much as I dropped out that same semester. I knew that 6502 doesn't have that many instructions in its set. The assembly we learned had C-like functions. 6502 was much simpler than that. I started learning using a few old and new sources and a JavaScript emulator. I found it fascinating that a machine-adjascent language which, 40 years ago, required a microprocessor to run, is now interpreted by a browser language. Amazing stuff. Moore's law predicted hardware progress, but its byproduct, software progress, is advancing even at a faster pace.
 
