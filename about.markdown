@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Find Me Online
+title: "My Book's Server"
 permalink: /about/
 ---
 
-You can find me online using these handles:
+Hey guys! I'm writing a book on ML! If you wanna know more about the progress, please add me to Discord and I will add you to the server:
 
-- Discord: Chubak#7400
-- Telegram: @bidpaafx
-- Twitter: @GvlSide
+# Chubak#7400
+
+Alternatively, email me;
+
+# Chubakbidpaa@gmail.com
