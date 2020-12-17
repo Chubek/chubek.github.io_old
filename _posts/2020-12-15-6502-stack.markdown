@@ -1,0 +1,130 @@
+---
+layout: post
+title:  "Explaining the Stack Through 6502 Assembly"
+date:   2020-12-15 09:12:17 +0330
+categories: retro
+---
+
+## Stack abuse
+
+*Stack abuse* is defined as forcing the stack to experience problems, including overflow. Stack in C, which is the language used to write most modern compilers, virtual machines, and interpreters in, is, although static in size (but its size depends on the session), it is so large that's it's immune to abuse without some good strategies. C's stack is a WWE wrestler, and our abuse code is a petite blonde former cheerleader. I haven't personllay managed to abuse the stack in C, there might be easier ways which I don't know about.
+
+However, stack in the 6502 Assembly is very, very small, and we can overflow it easily, just with a loop that has a higher maximum iteration than the stack size (256 bytes).
+
+But hey, what IS stack? What is a *stack overflow*? Isn't it name of that website where we ask questions and get downvoted?
+
+There are loads and loads of posts and books explaining what stacks is. But they dont' show the code behind stack, because in C, you don't have direct access to it. What you have direct access to is the heap. In 6502 Assembly, stack and heap are mixed into one concept. It is stack in the way that it has a static size and is LIFO, but it is like heap because you manually add and remove values to and from it with the `push` and `pull` instructions. Keep in mind that heaps are not linaer and are hirearchical, as opposed to stacks which are linear. Heap is pyramid-like binary tree. I'll explain the differences between stacks and heaps and their use in memory management at the end.
+
+Alright. That's too many nudges and winks to stack without explaining what is actually is. Let's do that!
+
+## Stack as a Data Structure
+
+Imagine you are *stacking* up a bunch of plates. Can you somehow get a plate from the middle? Or the bottom? Well, no. You only get to pick **out** the **last** plate that you put in **first**. Stack is a data structure that's exactly like that, *Lastin, first out*. This picture from Wikipedia visualizes the data structure better:
+
+![LIFO Stack](/assets/img/lifo.png)
+
+
+Many languages have a library which implements stack. For example, Python has `queue`. But let's implement stack in C++ ourselves, using arrays.
+
+```
+int stack[100], n=100, top=-1; //define the array and variables
+void push(int val) {
+   if(top>=n-1)
+   cout<<"Stack Overflow"<<endl; //if the value of the stack pointer is higher than 100 already, we overflow the stack
+   else {
+      top++; //increase the value of stack pointer
+      stack[top]=val; //add value to stack at the stack pointer
+   }
+}
+void pop() {
+   if(top<=-1)
+   cout<<"Stack Underflow"<<endl; //if the value of the stack pointer is lower than -1, we underflow the stack
+   else {
+      cout<<"The popped element is "<< stack[top] <<endl;
+      top--; //decrease the value of stack pointer
+   }
+}
+```
+
+Here, we are coincided with three terms, *stack pointer*, *stack overflow* and *stack underflow*. This implementation is actually faulty because it doesn't *actually* pop the value from the array, because it's impossible. Most implementations of stack do this too. However, in Assembly, we actually pop the value from the memory. This is why learning stack in an Assembly language like 6502 is important. It actually messes with the memory itself, not the stack of the language.
+
+## Stack pointer, index register, overflow and underflow
+
+### Stack Pointer
+
+Stack pointer is a variable that holds the current *index* of stack. In 6502 assembly, it's an number which sets the boundary between used and unsued stack elements. In a 6502 microprocessor, stack is hardcoded between the memory addresses $0100 and $01FF. And it's in the zeroeth *page* of the memory. Memory page is a virtual concept that divides the RAM into bite-sized segments. In 6502 processor, a memory page is 512 bytes. You must have at least 2 pages in an 8-bit microprocessor, such as our beloved 6502, Z80 and Motorolla 6800, and that is why Sinclair ZX80, based on Z80, had only 1 kilobyte of RAM. The maximum memory addresses you can have in a 8-bit microprocessor, without *banking*, is about 8000. So Commodore 64 with its 64KB of RAM was pushing the limit.
+
+Now, let's see how we tell 6502 CPU which index of the array to look for when pushing values to the stack:
+
+```
+set_sp:
+
+    ldx #$ff
+    txs
+```
+
+Let's see what this means. In 6502, we have two *index* registers, called X and Y. With `ldx #$ff` we instruct the assembly to "load decimal value of 16 into the X index register". It also has a *stack register* called S. With `txs` we direct the assembly to "transfer the current value loaded in X register to S register". Whith `txs` instruction, the stack gets pointed to `$01FF` memory address. Remember that it's the last address of the stack. 
+
+### Pushing
+
+From now on, every time we use the `lda` instruction, the memory address `$01FF` is loaded with the value of the Accumulator. What is Accumulator, ou may ask? Well, it's where all the CPU magic happens. It's the *A register*. The value which we load to A register, from a memory address or directly with # directive, is loaded into the stack at it's current pointer.
+
+```
+init:
+    ldx #ff ;set the X index to $FF (16)
+    txs     ;set the stack pointer to $01FF
+
+push_easy:
+    lda #1  ;the decimal number 1 is now loaded to the A register
+    pha     ;the A register is pushed to the stackm $01FF is now $01 and stack pointer is $FE.
+
+push_hard:
+    ldy #$e0 ;set the Y index to $e0
+    tya ;transwer Y register to the accumulator (A register)
+    pha ;push the value loaded at A to the stack at $01FF, and decrease the stack pointer. S is now $FE
+```
+
+In the easy way, we just load the value into A register and push it into the stack, then the stack pointer decreases automatically. In the hard way, we first load the money into the index, then load the index into A using `tya` (transfer Y register to A register) and the push to the stack.
+
+### Pulling
+
+Now, let's pull/pop values from stack. Imagine the stack pointer is currently at $FE.
+
+```
+pla ;pull value off the stack into A. S now increases to $FF
+tax ;transfer A to X so that we don't lose the value
+```
+
+### Overflow and Underflow
+
+Imagine if S is #FF:
+
+```
+pla
+tax
+```
+S has to increase, but it can't because it's at the maximum. This causes underflow.
+
+Now imagine S is $00
+
+```
+lda #$fb
+pha
+```
+S has to decrease, but it can't because it's at the minimum. This causes overflow.
+
+
+
+## What is the use of Stack? How is it different from heap?
+
+Now that we know how stack works in 6502 Assembly, let's ask this question, stack, what is it good for? 
+
+Absolutely everything! But more importantly, memory management.
+
+Stacks are used for memory allocation. Stacks are used for *static memory allocation* whilst heaps are used for *dynamic memory allocation*. When a function is called, the language uses stacks because after execution, the memory is freed, as in, function is called, pushed to the memory, does its job, and is pulled.
+
+This is just one use of the stack in memory allocation though. Another use of stack in memory allocation is keeping array indices.
+
+I explained that heaps are like pyramids of binary trees. In C, you need to manually allocate a space on the heap. 
+
+I'm not gonna delve into this much deeper. If you wanna know more about memory stacks, read [this](https://b-ok.cc/book/2619769/0a64e4).
