@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why is Rust a Good Language of ML?"
+title:  "Why is Rust a Good Language for ML?"
 date:   2020-12-15 09:12:17 +0330
 categories: rust
 ---
