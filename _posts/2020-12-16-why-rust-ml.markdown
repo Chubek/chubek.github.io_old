@@ -6,7 +6,7 @@ categories: rust
 ---
 Languages like C and C++ are low-level systems programming languages which are used for, well, low-level programming. Memory management in C is manual (although not as *hard* as some *programming memes* want you to believe) and you have to keep the number of objects in heap under a tight visor (remember we talked about stack and heap in 6502 in one of the previous posts? Well, heap is where the the *objects* are located). In C/C++ we have *refrences* and *pointers*. In 6502 Assembly we talked about memory addresses. In these languages, a pointer is just a variable which *points* to a memory address and references refer to other variables. A reference to a pointer? Uh, let's not trigger a meme now! (I don't *hate* programming memes, it's just that rarely funny and they're very repetitive). All these are reasons that low-level languages are not good for machine learning. It's too complex, performant, but complex. 
 
-On the other hand, we have high-level langauges such as Python, JavaScript, and Java. In these langagues, the memory is managed for the programmer through *garbage collection*. In GC, objects in the heap that are no longer used by the program are invalidated by the collector. When not done correctly, it may lead to *memory leak*. For example, the Python library *pandas* does it more than actual pandas don't do mating. It usually hapens when the library is not fully Pythonic and uses Python's C API. GC strategies are not perfect, and data requires to be stored in massive objects which occupy a large set of memory addresses in the heap. I'm not saying Python is not good for data science, I myself use Python and also, I'm currently writing a book which implements low-level ML and DNN algorithms in Python (add me to Discord so I can add you to the server in which I post the drafts, Chubak#7400). However, Python's automatic memory management is not *perfect*.
+On the other hand, we have high-level langauges such as Python, JavaScript, and Java. In these langagues, the memory is managed for the programmer through *garbage collection*. In GC, objects in the heap that are no longer used by the program are invalidated by the collector. When not done correctly, it may lead to *memory leak*. For example, the Python library *pandas* does it more than actual pandas don't do mating. It usually hapens when the library is not fully Pythonic and uses Python's C API. GC strategies are not perfect, and data requires to be stored in massive objects which occupy a large set of memory addresses in the heap. I'm not saying Python is not good for data science, I myself use Python and also, I'm currently writing a book which implements low-level ML and DNN algorithms in Python (add me to Discord so I can add you to the server in which I post the drafts, [click here to join server](https://discord.gg/5uXBJvMM96)). However, Python's automatic memory management is not *perfect*.
 
 Now, ladies and gentleman, Rust. A language that's *somehow* low-level and *somewhat* high-level. 
 
@@ -233,6 +233,7 @@ let my_ip = IP::IPv6;
 
 
 
-Well, that's about it for now! I hope you've had a good time. **I'm writing an e-codex, call it a book**. If you wanna read new drafts, please follow me on Discord: Chubak#7400 and I will add you to the server.
+Well, that's about it for now! I hope you've had a good time. **I'm writing an e-codex, call it a book**. If you wanna read the new drafts, click [here](https://discord.gg/5uXBJvMM96) to join the server.
+
 
 Thank you!
