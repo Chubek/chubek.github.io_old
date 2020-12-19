@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  chubek
 twitter_username: gvlside
+google_analytics: G-7D7LDCPQ9Z
 
 # Build settings
 theme: minima
@@ -52,9 +53,9 @@ defaults:
 #   - .jekyll-cache/
 #   - gemfiles/
 #   - Gemfile
-#   - Gemfile.lock
+#   - Gemfile.lock linear algebra libraries
 #   - node_modules/
 #   - vendor/bundle/
-#   - vendor/cache/
+#   - vendor/cache/ linear algebra libraries
 #   - vendor/gems/
 #   - vendor/ruby/
