@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Development of Rusty-Recommender: Part I - Similarity Functions"
-date:   2020-12-15 09:12:17 +0330
+date:   2020-12-18 09:12:17 +0330
 categories: rust
 ---
 In the last post, I promised to pursue ML in Rust. I want to do this in a more applicative way: by building a recommender system in Rust from the ground up. We call it rusty-recommender; and I will document every step through a series of posts on this blog.
