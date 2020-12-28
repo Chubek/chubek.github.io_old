@@ -9,7 +9,7 @@ Generation of new data has many uses in machine learning. One is augmentation an
 
 GANs are HOT HOT HOT topics in the world of Deep Learning these days. If Deep learning is a high school in Beverly Hills, GANs are the rich Persian girl who owns a BMW and parties til dawn. 
 
-But the wallflower of this high school are the Restricted Boltzmann Machines. RBMs are old technology, but they were one of the earliest Deep Probabilistic Generative models that were proposed in 1986. However, it was extremely early for a generative model that's entirely reliant on the volume of data we give it. Simply because there wasn't enough data. So for the next 30 years, people just used generative algorithms such as Markov chains, which don't need a lot of data.
+But the wallflower of this high school are the Restricted Boltzmann Machines. RBMs are old technology, but they were one of the earliest Deep Probabilistic Generative models that were proposed in 1986. However, it was extremely early for a generative model that's entirely reliant on the volume of data we give it. Simply because there wasn't enough data. So for the next 30 years, people just used simple generative algorithms such as Markov chains, which don't need a lot of data.
 
 RBMs are usually trained using the *contrastive divergence* learning procedure. This method has a lot of hyperparams such as learning rate, momentum, weight-cost, sparsity target, initial values of the wieghts, and the number of hidden units --- and size of each mini-batch.
 
