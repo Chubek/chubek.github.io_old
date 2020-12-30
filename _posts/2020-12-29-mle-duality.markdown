@@ -31,7 +31,7 @@ Why? Because a logistic regressor is simply a *binary Maxent* model.
 
 We have a set of features X and a set of targets y which are distributed according to an unkown distribution. We wish to estimate the *conditional probability* `P(y|X)`, in other words, create a probabilistic ML model based on these data. There are two approaches.
 
-* **Discriminative approach:** We use tools from learning theory ot compute a hypthesis that models the conditional probability P(y|X) up to a small error.
+* **Discriminative approach:** We use tools from learning theory ot compute a hypthesis that models the conditional probability `P(y|X)` up to a small error.
 * **Generative approach:** We estimate the probability distribution `P(X|y)` separately for every y. For instance y could represent the attribute *gender* and x could represent the attirbute *height*. In this case, according to *Bayes' rule*:
 
 
