@@ -30,7 +30,7 @@ _loop:
   bne _loop ;branch to _loop if not equal
 ```
 
-We can use the Y register if we also wanna increasingly store into $D400-$D400 + decimal(3) addresses. No, there's no Z registers.
+We can use the Y register if we also wanna increasingly store into $D400-$D400 + decimal(3) addresses. No, there's no Z register.
 
 Now that you've got a clear understanding of 6502 CPU and its Assembly language, let's talk about "game boards".
 
