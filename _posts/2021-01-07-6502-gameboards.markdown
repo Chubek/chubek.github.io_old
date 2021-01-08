@@ -11,7 +11,7 @@ People who follow my blog know that my hobby is retroprogramming, especially 650
 
 6502 Assembly has only 56 instructions. Most devices using this CPU connected various interfaces to its bus, and programmers triggered them by using the specific memory registers in the *memory map*. Most these memory registers were in page 0.
 
-Imagine the SID chip, Commodore 64's oddly able audo chip. In C64 memory map, addresses $D400-$D7FF are designated for the SID chip. If you wanna know the capabilities of this chip, just listen to this [hauntigly beautiful version](https://www.youtube.com/watch?v=sgTSIaz7MIE) of Castlevania OST.
+Imagine the SID chip, Commodore 64's oddly able and awesome audio chip. In C64 memory map, addresses $D400-$D7FF are designated for the SID chip. If you wanna know the capabilities of this chip, just listen to this [hauntigly beautiful version](https://www.youtube.com/watch?v=sgTSIaz7MIE) of Castlevania OST.
 
 The way a memory address was triggered was this, load a value to the Acclumator (the A register, something that every Von Neumann machine must have) --- then store A onto the memory address.
 
