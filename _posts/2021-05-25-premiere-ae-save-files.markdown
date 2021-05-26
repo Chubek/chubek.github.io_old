@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Text InsideAdobe Premiere Save Files: What Are They?"
+title:  "Text Inside Adobe Premiere Save Files: What Are They?"
 date:   2021-05-25 09:12:17 +0330
 categories: interesting
 ---
