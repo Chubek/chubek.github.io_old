@@ -24,5 +24,7 @@ I work for Westerners. But not all Iranian girls can work for Westerners. I'm lu
 
 Now I'm nto saying UI/UX is bad. I'm just saying it's equivocal to soft sciences in programming, and the fact that majority of Iranian programmer women do UI/UX is just a symptom of deep sexism.
 
+So here's how it is. People, male, female, who are educated at the best universities such as Elm-o-Sanat, Sharif, Amir Kabir, Shahid Beheshti, Ferdowsi, Isfahan etc, immigrate out of this dank cesspit the first moment they get or are hired by the private sector. Those unlucky to have studied at lesser colleges or have no degree like me have to work for the government. But the government, well, you know... I mean, I once called the Iranian Parliament Research Center and I found out that their IT department head is a woman. BUT that could be the exception that proves the rule because the government I know is neither for, nor against hiring women. Not sure. I just know that most women whom I know who work for the public sector are teachers or drones, not engineers.
+
 Thanks.
 
