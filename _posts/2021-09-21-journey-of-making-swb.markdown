@@ -5,9 +5,8 @@ date:   2021-09-21 09:12:17 +0330
 categories: interesting
 ---
 
-Ok so, get this. I'm single! And have been all my life, except for a very brief window at 20. I always wondered "Why? Chera? Porquoi?" --- the answer is, I'm ugly, I'm not that smart, and I'm fat and I have the personality of a wet rag. I'm also bipolar and diabetic. No girl wants in this mess.
 
-I wanted to affirm my suspicions. So what I did was I went to Kaggle, downloaded OkCupid profiles dataset, and got busy.
+I wanted people to predict whether they'll find love. So what I did was I went to Kaggle, downloaded OkCupid profiles dataset, and got busy.
 
 You can view the model deployed here ---> [Will Sh3 B33](https://willsh3b33.xyz)
 
@@ -33,6 +32,6 @@ I then created a backend for it using Flask and a frontend for it using Vue. I b
 
 Everything I did, I had done before, save for frontend. I always sucked at frontend, but I decided to use Vue and Bootstrap-Vue and honestly, it was fun!
 
-I hope you have fun using my model. Maybe one day I get to train a real model? :winky face:
+I hope you have fun using my model.
 
 Thanks, Chubak Bidpaa (Chubak#7400, [Resume](http://chubakbidpaa.com/resume/))
