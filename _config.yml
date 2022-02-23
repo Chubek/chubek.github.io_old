@@ -31,7 +31,8 @@ google_analytics: UA-54660091-1
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-feed	
+  - jekyll-latex	
 
 defaults:
   - scope:
