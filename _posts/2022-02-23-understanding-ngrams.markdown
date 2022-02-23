@@ -1293,7 +1293,7 @@ And that's how we make sense of a text using n-grams.
 
 
 
-##### About the Author
+#### About the Author
 
-The author of this article is Chubak Bidpaa. The Markdown for this article is self-contained and can be downloaded from [here](). The HTML is also self-contained and can be downloaded from [here](). Chubak Bidpaa can be contacted on Discord at Chubak#7400. He can be reached via email at aurlito@riseup.net. Make sure to tag your email as [Gentooman] or [Gentoomen].
+The author of this article is Chubak Bidpaa. When he's not doing [insert inane bullshit] he's doing [insert another inane bullshit]. The Markdown for this article is self-contained and can be downloaded from [here](). The HTML is also self-contained and can be downloaded from [here](https://raw.githubusercontent.com/Chubek/chubek.github.io/master/_posts/2022-02-23-understanding-ngrams.markdown). Chubak Bidpaa can be contacted on Discord at Chubak#7400. He can be reached via email at aurlito@riseup.net. Make sure to tag your email as [Gentooman] or [Gentoomen].
 
