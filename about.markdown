@@ -38,6 +38,11 @@ How's life? It's good. Can't complain. I don't like glory, money, or any of thes
 
 So how can you contact me?
 
+**WHAT I'M CURRENTLY LOOKING FOR?**
+
+The things that I want. By Chubak Bidpaa. A glass of whiskey. The sun to shine. **A job in NFT gamedev space that requires low-level coding in the Nim systems programming language**. I want my wife back! (MAX PAYNE DEAREST OF ALL MY FRIENDS)
+
+
 I'm always online on Discord. My ID there is `Chubak#7400`. My email is <chubakbidpaa@gmail.com> --- don't ask why I haven't set up an MX record because then, it will be `chubakbidpaa@chubakbidpaa.com`! I really screwed the pooch there lol.
 
 Anyways, have a nice life, stranger!
